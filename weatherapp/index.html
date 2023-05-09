@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>weather Application</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.png" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <h1>Weather App</h1>
+
+      <div class="wrapperCard">
+        <div class="tab-container">
+          <p class="tab" data-userWeather>Your Weather</p>
+          <p class="tab" data-searchWeather>Search Weather</p>
+        </div>
+
+        <div class="weather-container">
+          <!-- grant location conatiner -->
+          <div class="sub-container grant-location-container">
+            <img
+              src="./assets/location.png"
+              alt=""
+              width="80"
+              height="80"
+              loading="lazy"
+            />
+            <p>Grant Location Access</p>
+            <p>Allow access to get weather information</p>
+            <button class="btn" data-grantAcess>Grant Access</button>
+          </div>
+
+          <!-- search conatainer -->
+          <form action="" class="form-container" data-searchForm>
+            <input placeholder="search for city..." data-searchInput />
+            <button class="btn">
+              <img
+                src="./assets/search.png"
+                alt=""
+                width="20"
+                height="20"
+                loading="lazy"
+              />
+            </button>
+          </form>
+
+          <!-- loading screen container -->
+          <div class="sub-container loading-container">
+            <img
+              src="./assets/loading.gif"
+              alt=""
+              width="150"
+              height="150"
+              loading="lazy"
+            />
+            <p>loading</p>
+          </div>
+
+          <!-- show weather info -->
+          <!-- city name and flg -->
+          <div class="erroeHndle">
+            <img
+              class="imageError"
+              src="assets/not-found.png"
+              alt=""
+              width="300"
+              height="300 "
+              loading="lazy"
+            />
+          </div>
+
+          <div class="sub-container user-info-container">
+            <div class="name">
+              <p data-cityName></p>
+              <img data-countryIcon />
+            </div>
+            <!-- weather description -->
+            <p data-weatherDesc></p>
+            <!-- weather icon -->
+            <img data-weatherIcon />
+            <!-- temperature -->
+            <p data-temp></p>
+
+            <div class="parameter-container">
+              <!-- card 1  Windspeed -->
+              <div class="parameter">
+                <img src="./assets/wind.png" alt="" />
+                <p>Windspeed</p>
+                <p data-windspeed></p>
+              </div>
+              <!-- card 2   humidity-->
+              <div class="parameter">
+                <img src="./assets/humidity.png" alt="" />
+                <p>humidity</p>
+                <p data-humidity></p>
+              </div>
+              <!-- card-3 Clouds -->
+              <div class="parameter">
+                <img src="./assets/cloud.png" alt="" />
+                <p>Clouds</p>
+                <p data-cloudiness></p>
+              </div>
+            </div>
+            <!-- 4 days information -->
+          </div>
+        </div>
+        <!-- wrapper card end -->
+      </div>
+      <!-- next conatner which contains the 5 days weather information  -->
+      <div class="wrapper2">
+        <div class="container-days-info">
+          <div class="days">
+            <p class="dayName" id="day-1"></p>
+            <img class="icon" />
+            <p class="w-desc">cloudy</p>
+            <p class="days-temp">524</p>
+          </div>
+          <div class="days">
+            <p class="dayName" id="day-2">tuesday</p>
+            <img class="icon" />
+            <p class="w-desc">cloudy</p>
+            <p class="days-temp">524</p>
+          </div>
+          <div class="days">
+            <p class="dayName" id="day-3">wednesday</p>
+            <img class="icon" />
+            <p class="w-desc">cloudy</p>
+            <p class="days-temp">524</p>
+          </div>
+          <div class="days">
+            <p class="dayName" id="day-4">Thursday</p>
+            <img class="icon" />
+            <p class="w-desc">cloudy</p>
+            <p class="days-temp">524</p>
+          </div>
+          <div class="days">
+            <p class="dayName" id="day-5">Friday</p>
+            <img class="icon" />
+            <p class="w-desc">cloudy</p>
+            <p class="days-temp">524</p>
+          </div>
+        </div>
+      </div>
+      <!--end  -->
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
